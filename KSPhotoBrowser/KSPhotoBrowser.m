@@ -198,6 +198,11 @@ static Class ImageViewClass = nil;
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self setStatusBarHidden:NO];
+}
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     [self setupFrames];

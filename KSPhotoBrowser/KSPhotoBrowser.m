@@ -10,16 +10,16 @@
 #import "KSPhotoView.h"
 #import "UIImage+KS.h"
 #import "KSSDImageManager.h"
-#import <FLAnimatedImage/FLAnimatedImage.h>
 
 static const NSTimeInterval kAnimationDuration = 0.33;
 static const NSTimeInterval kSpringAnimationDuration = 0.5;
 static const CGFloat kPageControlHeight = 20;
 static const CGFloat kPageControlBottomSpacing = 40;
+
 static Class ImageManagerClass = nil;
-static Class ImageViewClass = nil;
 
 @interface KSPhotoBrowser () <UIScrollViewDelegate, UIViewControllerTransitioningDelegate, CAAnimationDelegate>
+
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSMutableArray *photoItems;
 @property (nonatomic, strong) NSMutableSet *reusableItemViews;
@@ -67,9 +67,6 @@ static Class ImageViewClass = nil;
         
         if (ImageManagerClass == nil) {
             ImageManagerClass = KSSDImageManager.class;
-        }
-        if (ImageViewClass == nil) {
-            ImageViewClass = FLAnimatedImageView.class;
         }
     }
     return self;
@@ -794,10 +791,6 @@ static Class ImageViewClass = nil;
 
 // MARK: - Setter
 
-+ (void)setImageViewClass:(Class)imageViewClass {
-    ImageViewClass = imageViewClass;
-}
-
 + (void)setImageManagerClass:(Class)imageManagerClass {
     ImageManagerClass = imageManagerClass;
 }
@@ -810,10 +803,6 @@ static Class ImageViewClass = nil;
 
 + (Class)imageManagerClass {
     return ImageManagerClass;
-}
-
-+ (Class)imageViewClass {
-    return ImageViewClass;
 }
 
 + (UIColor *)imageViewBackgroundColor {

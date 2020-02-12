@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   # s.description  = <<-DESC
   #               DESC
 
-  s.homepage     = "https://github.com/skx926/KSPhotoBrowser"
+  s.homepage     = "https://github.com/HyanCat/KSPhotoBrowser"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/skx926/KSPhotoBrowser.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/HyanCat/KSPhotoBrowser.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
